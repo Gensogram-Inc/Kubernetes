@@ -52,7 +52,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 #Initialize Kubernetes Cluster (Master Node Only)
 
-sudo kubeadm init --control-plane-endpoint=k8s-control
+sudo kubeadm init --control-plane-endpoint=k8-control
 
 #To start using your cluster, you need to run the following as a regular user:
 
