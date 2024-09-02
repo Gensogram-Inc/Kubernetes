@@ -52,7 +52,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 #Initialize Kubernetes Cluster (Master Node Only)
 
-sudo kubeadm init --control-plane-endpoint=k8s-control
+sudo kubeadm init --control-plane-endpoint=k8s-control --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=172.31.23.34 --cri-socket=unix:///var/run/containerd/containerd.sock
 
 #To start using your cluster, you need to run the following as a regular user:
 
