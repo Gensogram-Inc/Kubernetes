@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeselector-pod
+  labels:
+    app: nginx-schedule-app
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: role
+            operator: In
+            values:
+            - priority
+  containers:
+  - name: nginx-selector-pod
+    image: nginx
+    ports:
+    - containerPort: 80
+  
