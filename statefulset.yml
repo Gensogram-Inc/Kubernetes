@@ -3,7 +3,7 @@ kind: StatefulSet
 metadata:
   name: nginx-sts
   labels:
-    app: nginx
+    app: nginx-sts
 spec:
   replicas: 2
   serviceName: nginx
