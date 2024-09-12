@@ -1,0 +1,3 @@
+[submodule "ticket-master"]
+	path = ticket-master
+	url = https://github.com/SarthakJha/TicketX.git
