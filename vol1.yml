@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: volume1-pod
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    command: ['sh', '-c', 'echo "Writing to /output" && sleep 3600']
+    volumeMounts:
+    - name: gensogram-volume
+      mountPath: /output
+  volumes:
+  - name: gensogram-volume
+    hostPath:
+      path: /data
+      type: DirectoryOrCreate

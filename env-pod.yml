@@ -4,7 +4,7 @@ metadata:
   name: env-pod
 spec:
   containers:
-  - name: busybox
+  - name: busybox10
     image: busybox
     command: ['sh', '-c', 'echo "configmap: $CONFIGMAPVAR secret: $SECRETVAR"']
     env:
